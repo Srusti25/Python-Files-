@@ -1,0 +1,67 @@
+
+1. Declare a div() function with two parameters. Then call the function and pass two numbers and display their division. 
+
+def div(num1,num2):                                     #defining div function
+    result = num1/num2                                  #diving two numbers
+    print("Result Division is: ",result)                #printing the result of the division
+num1 = float(input("Enter the first number: "))         # Input two numbers from the user
+num2 = float(input("Enter the second number: "))
+div(num1,num2)                                          #calling div function
+
+OUTPUT:
+
+Enter the first number: 12
+Enter the second number: 25
+Result Division is:  0.48
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. Declare a square() function with one parameter. Then call the function and pass one number and display the square of that number .
+
+def square(num):                                                #defining square function
+    result = num ** 2                                           #finding square
+    return result
+num = float(input("Enter a number: "))                          # Input a number from the user
+sq_result = square(num)                                         # Call the square function and display the square of the number
+print(f"The square of ",num ,"is: ",sq_result)                  #printing the square of the number
+
+OUTPUT:
+
+Enter a number: 31
+The square of  31.0 is:  961.0
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Using max() and min() functions display the maximum and minimum of 5 random numbers.
+
+import random                                                      #importing random package to generate the random numbers
+random_num = [random.randint(1, 100) for _ in range(5)]            # Generate 5 random numbers
+print("Generated random numbers:", random_num)                     # Display the generated random numbers
+max_num = max(random_num)                                          #Calculating the maximum and minimum of the random numbers
+min_num = min(random_num)
+print("Maximum of the random numbers is:", max_num)                #printing the maximum number
+print("Minimum of the random numbers is:", min_num)                #printing the minimum number
+
+OUTPUT:
+
+Generated random numbers: [42, 25, 57, 76, 2]
+Maximum of the random numbers is: 76
+Minimum of the random numbers is: 2
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. Accept a name from the user and display that in lower case using lower() function.
+
+name = input("Enter your name: ")             #Accept a name from the user
+lowercase_name = name.lower()                 #Convert the name to lowercase using the lower() function
+print("Name in lowercase:", lowercase_name)   # Display the name in lowercase
+
+OUTPUT:
+
+Enter your name: SRUSTI
+Name in lowercase: srusti
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+

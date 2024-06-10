@@ -1,0 +1,60 @@
+
+1. Using input[] function take one number from the user and using ternary operators check whether the number is even or odd.
+
+number=int(input("Enter a number: "))                  #taking input from user
+result="Even" if number%2==0 else "odd"                #checking whether the entered number is even or odd using ternary operator
+print("Entered number is: ",result)                    #printing the result
+
+OUTPUT
+
+Enter a number: 12
+Entered number is:  Even
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2.Using input function take two number and then swap the number.
+
+num1=int(input("Enter the First number: "))             #taking inputs from the user
+num2=int(input("Enter the Second number: "))            #taking inputs from the user
+num1,num2=num2,num1                                     #By using parallel assignment we are swapping two numbers
+print(num1)                                             #printing the swapped numbers
+print(num2)
+
+OUTPUT
+
+Enter the First number: 12
+Enter the Second number: 25
+25
+12
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3.Write a Program to Convert Kilometers to Miles.
+
+conversion_factor=0.621371                                            #Taking conversion factor
+kilometers = float(input("Enter distance in kilometers: "))           #taking input from the user for kilometers
+miles=kilometers*conversion_factor                                    #converting kilometers to miles from the formula
+print("After conversion: ",miles)                                     #printing the conversion value
+
+OUTPUT
+
+Enter distance in kilometers: 15
+After conversion:  9.320565
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. Find the Simple Interest on Rs. 200 for 5 years at 5% per year.
+
+principle=200                                                     #Entering the value for principle
+interest=5                                                        #Entering the value for interest
+years=5                                                           #Entering the value for years
+interest_decimal=interest/100                                     #converting interest from percentage to decimal
+simple_interest=(principle*interest_decimal*years)/100            #calculating simple interest
+print("Simple Interest: ",simple_interest)                        #printing the simple interest
+
+OUTPUT
+
+Simple Interest:  0.5
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

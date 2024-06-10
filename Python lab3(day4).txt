@@ -1,0 +1,131 @@
+
+1. Python program to check leap year.
+
+year=int(input("Enter a year: "))              #Taking input from the user
+def is_leap_year(year):                        #Defining the function called is_leap_year
+    if year%4==0:                              #if the entered year is leap it will return true else it will return false
+        if year%100==0:
+            if year%400==0:
+                return True
+            else:
+                return False
+        else:
+            return True
+    else:
+        return False
+        
+if is_leap_year(year):                         #calling function to check leap year or not
+    print("Leap year")                         #Printing statement
+else:
+    print("Not a Leap year")
+    
+OUTPUT:
+
+Enter a year: 1998
+Not a Leap year
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2.Python program to find the largest among three numbers.
+
+def largest(num1,num2,num3):                                #defining the function called largest
+    if num1>=num2 and num1>=num3:
+        largest=num1
+    elif num2>=num1 and num2>=num3:
+        largest=num2
+    else:
+        largest=num3
+    return largest
+    
+num1=int(input("Enter the First Number: "))                 #taking user inputs
+num2=int(input("Enter the Second Number: "))
+num3=int(input("Enter the Third Number: "))
+largest=largest(num1,num2,num3)                             #calling largest function to find the largest of three numbers
+print("The Largest of Three Numbers is: ",largest)          #printing the largest among three
+
+OUTPUT:
+
+Enter the First Number: 12
+Enter the Second Number: 25
+Enter the Third Number: 31
+The Largest of Three Numbers is:  31
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Python program to check if a number is Positive,negative or Zero(0)
+
+def check_number(num):                                      #defining the function called check_number
+    if num>0:
+        print("The number is Positive.")                    #print statement to print if the number is positive
+    elif num<0:
+        print("Thr number is Negative.")                    #print statement to print if the number is negative
+    else:
+        print("The number is Zero.")                        #print statement to print if the number is Zero
+        
+num=float(input("Enter a number: "))                        #asking input from the user
+check_number(num)                                           #calling function
+
+OUTPUT:
+
+Enter a number: 15
+The number is Positive.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. A toy vendor supplies three types of toys: Battery Based Toys, Key-based Toys, and Electrical Charging Based Toys.
+ The vendor gives a discount of 10% on orders for battery-based toys if the order is for more than Rs. 1000. On orders
+ of more than Rs. 100 for key-based toys, a discount of 5% is given, and a discount of 10% is given on orders for electrical 
+charging based toys of value more than Rs. 500. Assume that the numeric codes 1,2 and 3 are used for battery based toys,
+ key-based toys, and electrical charging based toys respectively. Write a program that reads the product code and the order
+ amount and prints out the net amount that the customer is required to pay after the discount. 
+
+def calculate_discount(product_code,order_amt):            #defining the function called calculate_discount
+    discount=0
+    if product_code==1 and order_amt>1000:                 #checking condtion according to the purchase
+        discount=0.10
+    elif product_code==2 and order_amt>100:
+        discount=0.05
+    elif product_code==3 and order_amt>500:
+        discount=0.10
+    net_amt=order_amt-(order_amt*discount)
+    return net_amt
+                                                  #taking input for the product code
+product_code=int(input("Enter the product code(1 for Battery based toys,2 for key-based toys,3 for electrical charging based toys): "))
+order_amt=float(input("Enter the order amount in Rs: "))       #taking input for the order amount
+net_amt=calculate_discount(product_code,order_amt)             #calculatig the net amount
+print("The net amount after discount: Rs.",net_amt)            #printing the net amount
+
+OUTPUT:
+
+Enter the product code(1 for Battery based toys,2 for key-based toys,3 for electrical charging based toys): 1
+Enter the order amount in Rs: 1200
+The net amount after discount: Rs. 1080.0
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+5. A transport company charges the fare according to following table: Distance Charges 1-50 8 Rs./Km 51-100 10 Rs./Km > 100 12 Rs/Km.
+
+def calculate_fare(distance):
+    if distance <= 50:
+        fare = distance * 8                                        # Rs. 8 per km for distances up to 50 km
+    elif distance <= 100:
+        fare = 50 * 8 + (distance - 50) * 10                       # Rs. 10 per km for distances between 51 and 100 km
+    else:
+        fare = 50 * 8 + 50 * 10 + (distance - 100) * 12            # Rs. 12 per km for distances greater than 100 km
+    return fare
+
+                                                                   # Input distance from the user
+distance = float(input("Enter the distance traveled in kilometers: "))
+fare = calculate_fare(distance)                                    #calculating fare
+print(f"The fare for the given distance is Rs.",fare)              #printing fare
+
+OUTPUT:
+
+Enter the distance traveled in kilometers: 15
+The fare for the given distance is Rs. 120.0
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    
+
+

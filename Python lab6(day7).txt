@@ -1,0 +1,126 @@
+
+1. Print the first 10 natural numbers using for loop 
+
+print("The First 10 Natural Numbers are: ")            #print statement
+for num in range(1, 11):                               #Range from 1 to 10 (includes 1, excludes 11)
+    print(num)                                         #prints the natural numbers one by one 
+
+OUTPUT:
+
+The First 10 Natural Numbers are: 
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. Python program to check if the given string is a palindrome 
+
+def is_palindrome(user_string):
+    user_string = user_string.replace(" ", "").lower()          # Removes spaces and convert to lowercase for case-insensitive comparison
+    return user_string == user_string[::-1]                     # Check if the string is equal to its reverse
+user_string = input("Enter a string: ")                         # Input a string from the user
+
+if is_palindrome(user_string):                                  # Call the is_palindrome function
+    print(user_string," is a palindrome.")                      # printing statement
+else:
+    print(user_string," is not a palindrome.")
+
+OUTPUT:
+
+Enter a string: DAD
+DAD  is a palindrome.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Python program to check if a given number is an Armstrong number.
+
+def is_armstrong_number(num):
+    num_str = str(num)num_digits = len(num_str)
+armstrong_sum = 0                                                # Initialize the sum of powered digits
+for digit in num_str:                                            # Iterate through each digit of the number using a for loop
+    armstrong_sum += int(digit) ** num_digits                    # Add the powered digit to the sum
+  return armstrong_sum == num                                    # Check if the sum is equal to the original number
+
+number = int(input("Enter a number to check if it's an Armstrong number: "))         # Input a number from the user
+
+if is_armstrong_number(number):                                      # Call the is_armstrong_number function 
+    print(number,"is an Armstrong number.")                          #printing statement
+else:
+    print(number,"is not an Armstrong number.")
+
+OUTPUT:
+
+Enter a number to check if it's an Armstrong number: 153
+153 is an Armstrong number.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. Python program to get the Fibonacci series between 0 to 50 
+
+fibonacci_series = []                                                 # Initialize variables to store Fibonacci numbers
+a=0
+b=1 
+
+for _ in range(50):                                                   # Generate Fibonacci series using a for loop
+    if a > 50:
+        break                                                         # Exit the loop if Fibonacci number exceeds 50
+    fibonacci_series.append(a)                                        # Add current Fibonacci number to the series
+    a, b = b, a + b                                                   # Calculate next Fibonacci number
+
+print("Fibonacci series between 0 and 50 is:")                        # Print the Fibonacci series
+print(fibonacci_series)
+
+OUTPUT:
+
+Fibonacci series between 0 and 50 is:
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+5. Python program to check the validity of password input by users.
+
+def valid_password(password):
+    if len(password) < 8:                                                   # Check the length of the password
+        return False  
+    
+    has_uppercase = False                                               # Check if the password contains at least one uppercase letter, lowercase letter, and digit
+    has_lowercase = False
+    has_digit = False
+    for char in password:
+        if char.isupper():
+            has_uppercase = True
+        elif char.islower():
+            has_lowercase = True
+        elif char.isdigit():
+            has_digit = True
+    return has_uppercase 
+    return has_lowercase 
+    return has_digit
+
+password_input = input("Enter a password to check its validity: ")         # Input a password from the user
+
+if valid_password(password_input):
+    print("Valid password.")
+else:
+    print("Invalid password. Password should be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one digit.")
+
+
+OUTPUT:
+
+Enter a password to check its validity: Abcde123
+Valid password.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   
+
+
+
